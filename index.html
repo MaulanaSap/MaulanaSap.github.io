@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 13 | Pemograman Web</title>
+
+    <link rel="stylesheet" href="css/w3.css" />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .img-sec {
+        width: 100%;
+        height: 10%;
+      }
+      .img-sec img {
+        width: 100%;
+        height: 220px;
+      }
+      .section {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        margin-bottom: 10px;
+      }
+      .section .sec-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .section .kiri {
+        width: 45%;
+      }
+      .section img {
+        width: 300px;
+        height: 250px;
+        padding-top: 20px;
+      }
+      .section h2 {
+        font-size: 20px;
+        margin-left: 40px;
+      }
+      .section .kanan {
+        padding-top: 20px;
+        width: 100%;
+      }
+
+      #animes h2,
+      #games h2,
+      #hobi h2 {
+        margin-top: 10px;
+        text-align: center;
+      }
+      #animes .sec-2,
+      #games .sec-2,
+      #hobi .sec-2 {
+        margin-left: 10%;
+      }
+      #animes .sec-2 img,
+      #games .sec-2 img,
+      #hobi .sec-2 img {
+        margin-right: 40px;
+        width: 20%;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-container w3-center img-sec">
+      <img src="./css/anime.webp" />
+    </div>
+
+    <!-- Navbar -->
+    <div class="w3-bar w3-green">
+      <button class="w3-bar-item w3-button" onclick="btnClick('favorites')">
+        favorite Anime
+      </button>
+      <button class="w3-bar-item w3-button" onclick="btnClick('game')">
+        favorite Games
+      </button>
+      <button class="w3-bar-item w3-button" onclick="btnClick('profile')">
+        Profile
+      </button>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button">Other</button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <button class="w3-bar-item w3-button" onclick="btnClick('animes')">
+            Animes
+          </button>
+          <button class="w3-bar-item w3-button" onclick="btnClick('games')">
+            Games
+          </button>
+          <button class="w3-bar-item w3-button" onclick="btnClick('hobi')">
+            Hobi
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Isi body -->
+    <div
+      id="favorites"
+      class="w3-container w3-animate-zoom section"
+      style="display: none"
+    >
+      <div class="sec-1">
+        <div class="kiri">
+          <img src="css/sigatsukimi.webp" alt="mobil" />
+          <h2><b>Shigatsu wa Kimi no uso</b></h2>
+        </div>
+        <div class="kanan">
+          <p>
+            Anime ini bercerita tentang Kousei Arima, seorang anak laki-laki
+            yang berbakat dalam bermain piano dan selalu tampil mendominasi
+            dalam berbagai kompetisi, sehingga menjadikannya terkenal di antara
+            para musikus cilik. Setelah ibunya meninggal dunia, ia mengalami
+            tekanan mental di tengah-tengah sebuah pertunjukan piano pada usia
+            12 tahun. Sejak itu, ia tidak lagi bisa mendengar suara pianonya
+            sendiri dan berhenti bermain piano. Kehidupan Kousei berubah ketika
+            ia bertemu dengan Kaori Miyazono, seorang gadis pemalu dan energik
+            yang bermain biola. Kaori mengajak Kousei untuk bermain piano
+            bersamanya dan membantunya untuk mengatasi traumanya. Persahabatan
+            mereka semakin dekat dan mereka pun jatuh cinta. Namun, Kaori
+            menyimpan sebuah rahasia yang akan mengubah hidup mereka berdua.
+          </p>
+          <br />
+          <p>
+            Anime Shigatsu wa Kimi no Uso adalah sebuah anime yang menyentuh
+            hati dan penuh dengan pesan moral. Anime ini mengajarkan kita
+            tentang pentingnya cinta, persahabatan, dan perjuangan untuk
+            mengatasi trauma.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="game"
+      class="w3-container w3-animate-zoom section"
+      style="display: none"
+    >
+      <div class="sec-1">
+        <div class="kiri">
+          <img src="css/fornite.webp" alt="mobil" />
+          <h2 style="margin-left: 110px"><b>Fornite</b></h2>
+        </div>
+        <div class="kanan">
+          <p>
+            Fortnite adalah game video battle royale yang dikembangkan oleh Epic
+            Games dan dirilis pada tahun 2017. Game ini tersedia untuk dimainkan
+            di berbagai platform, termasuk PlayStation 4, Xbox One, Nintendo
+            Switch, Microsoft Windows, dan Android.
+          </p>
+          <br />
+          <p>
+            Dalam Fortnite, pemain bersaing untuk menjadi orang terakhir yang
+            bertahan hidup di pulau yang terus menyusut. Pemain dapat
+            menggunakan berbagai senjata dan item untuk bertarung melawan pemain
+            lain, serta untuk membangun struktur untuk melindungi diri mereka
+            sendiri.
+          </p>
+          <br />
+          <p>
+            Fortnite telah menjadi salah satu game paling populer di dunia. Game
+            ini telah menarik lebih dari 350 juta pemain di seluruh dunia.
+            Fortnite juga telah menjadi fenomena budaya, dengan berbagai
+            kolaborasi dengan merek dan tokoh terkenal.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="profile"
+      class="w3-container kota w3-animate-zoom section"
+      style="display: none"
+    >
+      <div class="sec-1">
+        <div class="kiri">
+          <img src="css/me.jpg" alt="mobil" />
+        </div>
+        <div class="kanan">
+          <table>
+            <tr>
+              <td><h2>Nama</h2></td>
+              <td><h2>:</h2></td>
+              <td><h2>Maulana Saputra</h2></td>
+            </tr>
+            <tr>
+              <td><h2>NIM</h2></td>
+              <td><h2>:</h2></td>
+              <td><h2>10123064</h2></td>
+            </tr>
+            <tr>
+              <td><h2>Mata Kuliah</h2></td>
+              <td><h2>:</h2></td>
+              <td><h2>Pemograman Web</h2></td>
+            </tr>
+            <tr>
+              <td><h2>Kuliah</h2></td>
+              <td><h2>:</h2></td>
+              <td><h2>Universitas Komputer Indonesia</h2></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="animes"
+      class="w3-container section w3-animate-top"
+      style="display: none"
+    >
+      <h2><b>Animes</b></h2>
+      <div class="sec-2">
+        <img src="css/sigatsukimi.webp" alt="" />
+        <img src="css/demonslayer.webp" alt="" />
+        <img src="css/blackClover.webp" alt="" />
+        <img src="css/jujutsu.webp" alt="" />
+        <img src="css/tensure.webp" alt="" />
+        <img src="css/naruto.webp" alt="" />
+        <img src="css/saenai.webp" alt="" />
+        <img src="css/horimiya.webp" alt="" />
+      </div>
+    </div>
+
+    <div
+      id="games"
+      class="w3-container section w3-animate-bottom"
+      style="display: none"
+    >
+      <h2><b>Animes</b></h2>
+      <div class="sec-2">
+        <img src="css/fornite.webp" alt="" />
+        <img src="css/ml.webp" alt="" />
+        <img src="css/pubg.webp" alt="" />
+        <img src="css/godofwar.webp" alt="" />
+        <img src="css/re4.webp" alt="" />
+        <img src="css/coc.webp" alt="" />
+        <img src="css/brawl-stars.webp" alt="" />
+        <img src="css/aov.webp" alt="" />
+      </div>
+    </div>
+
+    <div
+      id="hobi"
+      class="w3-container section w3-animate-bottom"
+      style="display: none"
+    >
+      <h2><b>Hobi</b></h2>
+      <div class="sec-2">
+        <img src="css/musik.webp" alt="" />
+        <img src="css/mainGames.webp" alt="" />
+        <img src="css/Rebahan.webp" alt="" />
+        <img src="css/nontonAnime.webp" alt="" />
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script>
+      let mobil = document.getElementById("mobil");
+      let unikomDago = document.getElementById("unikomDago");
+      let kampus = document.getElementById("kampus");
+      let foto = document.getElementById("foto");
+
+      function btnClick(nameSection) {
+        let i;
+        let x = document.getElementsByClassName("section");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(nameSection).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
